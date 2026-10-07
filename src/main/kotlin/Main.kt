@@ -4,11 +4,14 @@ import Person1
 
 fun main() {
 
-    val person1 = Person1("John")
-    val person2 = Person1("John")
-    println(person1 == person2)
+    val names = listOf("Alice", "Bob", "Charlie")
 
-    val person3 = Person("Chocobe")
-    val person4 = Person("Chocobe")
-    println(person3 == person4)
+    println("람다 기본형: ")
+    names.forEach({ name -> println(name) })
+
+    println("\n람다를 파라미터 밖으로 옮기기: ")
+    names.forEach() { name -> println(name) }
+
+    println("\n인자가 1개인 람다는 \"함수명(It)\"으로 축약 가능: ")
+    names.forEach { println(it) }
 }
