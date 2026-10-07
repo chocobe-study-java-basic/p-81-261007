@@ -4,14 +4,23 @@ import Person1
 
 fun main() {
 
-    val names = listOf("Alice", "Bob", "Charlie")
+    val name: String = "Alice"
 
-    println("람다 기본형: ")
-    names.forEach({ name -> println(name) })
+    println(name.length)
+    println(name.uppercase())
+    println(name.lowercase())
 
-    println("\n람다를 파라미터 밖으로 옮기기: ")
-    names.forEach() { name -> println(name) }
+    name.greet()
 
-    println("\n인자가 1개인 람다는 \"함수명(It)\"으로 축약 가능: ")
-    names.forEach { println(it) }
+    val numbers = listOf(1, 2, 3, 4, 5)
+    println(numbers.square())
+}
+
+fun String.greet() {
+    println("Hello, $this")
+}
+
+fun List<Int>.square(): List<Int> {
+    val result = this.map({ value -> value * value })
+    return result
 }
