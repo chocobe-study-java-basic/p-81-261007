@@ -1,12 +1,15 @@
 package com.github.chocobe
 
-import Person1
-
 fun main() {
-//    val person1 = Person1("Alice")
-//    person1.greet()
 
-    val person = Person("Chocobe~")
-    person.greet()
-    staticGreet()
+    val names = listOf("Alice", "Bob", "Charlie")
+    for (name in names) {
+        println("Hello $name")
+    }
+
+    val mutableNames = mutableListOf("Alice", "Bob", "Charlie")
+    mutableNames.add("Chocobe")
+    for (name in mutableNames) {
+        println("Hello $name")
+    }
 }
