@@ -1,21 +1,21 @@
 package com.github.chocobe
 
+import java.io.File
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
+
 fun main() {
-    val s1 = Singleton
-    val s2 = Singleton
-    println(s1)
-    println(s2)
-    println(s1 == s2)
 
-    val t1 = NotSingleton()
-    val t2 = NotSingleton()
-    println(t1)
-    println(t2)
-    println(t1 == t2)
-}
+    val result = try {
+        Files.copy(
+            File("a.txt").toPath(),
+            File("a_copy.txt").toPath(),
+            StandardCopyOption.REPLACE_EXISTING)
+        true
+    } catch(e: Exception) {
+        e.printStackTrace()
+        false
+    }
 
-object Singleton {
-}
-
-class NotSingleton {
+    println("파일 복사: $result")
 }
