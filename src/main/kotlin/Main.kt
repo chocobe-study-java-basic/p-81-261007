@@ -2,25 +2,16 @@ package com.github.chocobe
 
 fun main() {
 
-    val ageMap = mapOf(
-        "Peter" to 24,
-        "Clark" to 30,
-        "Bruce" to 40
-    )
+    val name1: String = "John"
+    val name2: String? = null
 
-    for ((key, value) in ageMap) {
-        println("$key: $value")
+    println(name1.length)
+
+    if (name2 != null) {
+        println(name2.length)
     }
 
+    println(name2?.length)
 
-    val mutableAgeMap = mutableMapOf(
-        "Peter" to 24,
-        "Clark" to 30,
-        "Bruce" to 40
-    )
-    mutableAgeMap["Peter"] = 42
-
-    for (entry in mutableAgeMap) {
-        println("$entry")
-    }
+    println(name2?.length ?: -1)
 }
