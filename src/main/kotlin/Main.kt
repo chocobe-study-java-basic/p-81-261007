@@ -1,11 +1,21 @@
 package com.github.chocobe
 
 fun main() {
-    sayHello(age = 10)
-    sayHello("Chocobe", 20)
-    sayHello(age = 30, name = "Miles")
+    val s1 = Singleton
+    val s2 = Singleton
+    println(s1)
+    println(s2)
+    println(s1 == s2)
+
+    val t1 = NotSingleton()
+    val t2 = NotSingleton()
+    println(t1)
+    println(t2)
+    println(t1 == t2)
 }
 
-fun sayHello(name: String = "Guest", age: Int) {
-    println("Hello, $name")
+object Singleton {
+}
+
+class NotSingleton {
 }
