@@ -2,14 +2,25 @@ package com.github.chocobe
 
 fun main() {
 
-    val names = listOf("Alice", "Bob", "Charlie")
-    for (name in names) {
-        println("Hello $name")
+    val ageMap = mapOf(
+        "Peter" to 24,
+        "Clark" to 30,
+        "Bruce" to 40
+    )
+
+    for ((key, value) in ageMap) {
+        println("$key: $value")
     }
 
-    val mutableNames = mutableListOf("Alice", "Bob", "Charlie")
-    mutableNames.add("Chocobe")
-    for (name in mutableNames) {
-        println("Hello $name")
+
+    val mutableAgeMap = mutableMapOf(
+        "Peter" to 24,
+        "Clark" to 30,
+        "Bruce" to 40
+    )
+    mutableAgeMap["Peter"] = 42
+
+    for (entry in mutableAgeMap) {
+        println("$entry")
     }
 }
