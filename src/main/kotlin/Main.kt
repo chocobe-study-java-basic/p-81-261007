@@ -1,10 +1,12 @@
 package com.github.chocobe
 
-fun main() {
-    val result = sum(1, 2)
-    println("result: $result")
-}
+import Person1
 
-fun sum(lhs: Int, rhs: Int): Int {
-    return lhs + rhs
+fun main() {
+//    val person1 = Person1("Alice")
+//    person1.greet()
+
+    val person = Person("Chocobe~")
+    person.greet()
+    staticGreet()
 }
