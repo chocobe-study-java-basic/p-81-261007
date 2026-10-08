@@ -2,9 +2,9 @@ package com.github.chocobe
 
 fun main() {
 
-    val numbers = listOf(1, 2, 3, 4, 5, 6)
-    val result = numbers.filter { it % 2 == 0 }
+    val names = listOf("Alice", "Bob", "Charlie")
 
-    result.forEach { println(it) }
-    result.forEach(::println)
+    names
+        .map { "Hello, $it" }
+        .forEach(::println)
 }
