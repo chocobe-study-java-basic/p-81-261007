@@ -12,4 +12,8 @@ class Person {
     fun init() {
         println("$name 객체를 초기화 하였습니다.")
     }
+
+    fun getPersonNumber(): Int {
+        return 1234
+    }
 }
