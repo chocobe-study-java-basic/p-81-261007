@@ -1,25 +1,14 @@
 package com.github.chocobe
 
 fun main() {
-    val dog1 = Dog()
-    dog1.eat()
-    dog1.play()
+    val person1 = Person("Chocobe")
+    println("person1.getName() = ${person1.getName()}")
 }
 
-open class Animal {
-    open fun eat() {
-        println("Animal is eating!")
-    }
-}
-
-interface Pet {
-    fun play() {
-        println("(default fun) Pet is playing...")
-    }
-}
-
-class Dog : Animal(), Pet {
-    override fun play() {
-        println("Dog is playing!")
+class Person(
+    private val name: String,
+) {
+    fun getName(): String {
+        return name
     }
 }
