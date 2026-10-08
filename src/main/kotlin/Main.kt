@@ -1,11 +1,18 @@
 package com.github.chocobe
 
 fun main() {
-    println("lazyValue = $lazyValue")
-    println("lazyValue = $lazyValue")
+    println("MyUtils.MY_PI = ${MyUtils.MY_PI}")
+
+    MyUtils.greeting()
+    MyUtils.greeting("Chocobe")
 }
 
-val lazyValue: String by lazy {
-    println("Computed!")
-    "Hello"
+class MyUtils {
+    companion object {
+        val MY_PI = 3.14
+
+        fun greeting(name: String? = null) {
+            println("Hello ${name ?: "World"}!")
+        }
+    }
 }
