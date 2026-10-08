@@ -2,9 +2,15 @@ package com.github.chocobe
 
 fun main() {
 
-    val obj: Any = "Hello, World!"
+//    val p = Person()
+//    p.name = "John"
+//    p.age = 20
 
-    if (obj is String) {
-        println(obj.length)
+    val p = Person().apply {
+        age = 20
+        name = "John"
+        init()
     }
+
+    p.greet()
 }
