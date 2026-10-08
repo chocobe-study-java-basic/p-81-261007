@@ -2,15 +2,15 @@ package com.github.chocobe
 
 fun main() {
 
-//    val p = Person()
-//    p.name = "John"
-//    p.age = 20
+    val name: String? = "Hello"
 
-    val p = Person().apply {
-        age = 20
-        name = "John"
-        init()
+    println(name?.length)
+
+    val result = name?.let {
+        // logic...
+        println(it)
+        it.length
     }
 
-    p.greet()
+    println("result: $result")
 }
