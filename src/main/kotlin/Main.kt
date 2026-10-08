@@ -2,13 +2,22 @@ package com.github.chocobe
 
 fun main() {
     val person1 = Person("Chocobe")
-    println("person1.getName() = ${person1.getName()}")
+
+//    person1.name = "John"
+//    println("person1.name = ${person1.name}")
+
+    person1.name = "Miles"
+    println("person1.name2 = ${person1.name}")
 }
 
 class Person(
-    private val name: String,
+    private var _name: String,
 ) {
-    fun getName(): String {
-        return name
-    }
+    var name: String
+        set(value) {
+            _name = value
+        }
+        get() {
+            return _name
+        }
 }
