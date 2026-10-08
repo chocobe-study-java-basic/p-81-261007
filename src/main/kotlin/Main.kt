@@ -2,6 +2,9 @@ package com.github.chocobe
 
 fun main() {
 
-    val name: String? = null
-    println(name?.uppercase() ?: "Chocobe")
+    val obj: Any = "Hello, World!"
+
+    if (obj is String) {
+        println(obj.length)
+    }
 }
