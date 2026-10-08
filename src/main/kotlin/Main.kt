@@ -1,18 +1,19 @@
 package com.github.chocobe
 
 fun main() {
-    println("MyUtils.MY_PI = ${MyUtils.MY_PI}")
-
-    MyUtils.greeting()
-    MyUtils.greeting("Chocobe")
+    val dog = Dog()
+    dog.makeSound()
 }
 
-class MyUtils {
-    companion object {
-        val MY_PI = 3.14
+open class Animal {
+    open fun makeSound() {
+        println("Some generic animal sound")
+    }
+}
 
-        fun greeting(name: String? = null) {
-            println("Hello ${name ?: "World"}!")
-        }
+class Dog : Animal() {
+    override fun makeSound() {
+        super.makeSound()
+        println("- bark! bark!")
     }
 }
