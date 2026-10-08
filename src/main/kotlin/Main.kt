@@ -2,16 +2,9 @@ package com.github.chocobe
 
 fun main() {
 
-    val day = 3
+    val numbers = listOf(1, 2, 3, 4, 5, 6)
+    val result = numbers.filter { it % 2 == 0 }
 
-    val result = when(day) {
-        1 -> "Monday"
-        2 -> {
-            "Tuesday"
-        }
-        3 -> "Wednesday"
-        else -> "All"
-    }
-
-    println("result: $result")
+    result.forEach { println(it) }
+    result.forEach(::println)
 }
