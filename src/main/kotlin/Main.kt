@@ -1,10 +1,11 @@
 package com.github.chocobe
 
 fun main() {
-    val ex = Example()
-    println(ex)
+    println("lazyValue = $lazyValue")
+    println("lazyValue = $lazyValue")
 }
 
-class Example {
-    lateinit var value: String
+val lazyValue: String by lazy {
+    println("Computed!")
+    "Hello"
 }
